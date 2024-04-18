@@ -1,0 +1,168 @@
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.navbar-bg{
+    width: 100%;
+    position: fixed;
+    /* height: 5%; */
+     z-index: 10;
+    
+}
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #6B3CC9;
+    border: 1px solid #6B3CC9;
+    margin: auto;
+    padding: 10px 20px;
+    
+}
+
+.navbar-links{
+    flex:1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.navbar-links-logo{
+    display: flex;
+    flex-direction: row;
+}
+
+
+.navbar-links-logo img{
+    margin-top: 3%;
+    width: auto;
+    height: auto;
+}
+
+.navbar-brand {
+    margin-left: 10px; /* Optional: Add margin to the left of the brand text */
+    font-size: 1.25rem; /* Adjust font size as desired */
+    color: white;
+}
+
+
+.navbar-links-container{
+    display: flex;
+    flex-direction: row;
+    margin-right: 2rem;
+    color: white;
+}
+
+.navbar-links-container p,
+.navbar-menu-container p{
+    color:black;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 15px;
+    margin: 0 1rem;
+    cursor: pointer;
+    text-align: left;
+}
+
+.navbar-menu{
+    margin-left: 1rem;
+    display: none;
+    position: relative;
+    margin-right: 2rem;
+}
+
+.navbar-menu svg{
+    cursor: pointer;
+}
+
+.navbar-menu-container{
+    display: flex;
+    justify-content: flex-start;
+    align-items: start;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 1rem;
+    position: fixed; /* Use fixed position */
+    top: 0;
+    left: 0;
+    width: 100%; /* Full width of the screen */
+    height: 100%; /* Full height of the screen */
+    z-index: 999; /* Ensure it's on top of other elements */
+}
+
+.navbar-menu-container p{
+    margin-top: 2rem;
+    text-align: left;
+}
+
+.navbar-menu-container p a{
+    color: black;
+}
+.navbar-menu-container .close-btn{
+    position: absolute;
+    top: 20px;
+    right: 50px;
+}
+.scale-up-center
+{
+    -webkit-animation: scale-up-center 0.4s cubic-bezier(0.39,0.575,0.565,1) both;
+    animation: scale-up-center 0.4s cubic-bezier(0.39,0.575,0.565,1) both;
+}
+
+@-webkit-keyframes scale-up-center{
+    0%{
+        -webkit-animation: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100%{
+        -webkit-animation: scale(1);
+        transform: scale(1);
+    }
+}
+
+@keyframes scale-up-center{
+    0%{
+        -webkit-animation: scale(0.5);
+        transform: scale(0.5);
+    }
+
+    100%{
+        -webkit-animation: scale(1);
+        transform: scale(1);
+    }
+}
+
+@media screen and (max-width:1050px) {
+    .navbar-links-container{
+        display: none;
+    }
+
+    .navbar-menu{
+        display: flex;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .navbar{
+        padding: 0.5rem 1rem;
+    }
+}
+
+@media screen and (max-width:550px) {
+    .navbar{
+        padding: 0.5rem;
+    }
+
+    .navbar-links-logo img{
+        padding: 0.4rem 1rem; 
+    }
+
+    .navbar-menu-container{
+        /* top: 60px; */
+    }
+
+}
